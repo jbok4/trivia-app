@@ -1,5 +1,5 @@
 class Quiz < ApplicationRecord
-  has_many :trivia_questions
+  has_many :questions
 
   
 

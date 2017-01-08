@@ -1,6 +1,6 @@
-class CreatePlayerData < ActiveRecord::Migration[5.0]
+class CreateInfo < ActiveRecord::Migration[5.0]
   def change
-    create_table :player_data do |t|
+    create_table :info do |t|
       t.string :type
       t.string :image_url
       t.string :locations

@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170108163037) do
 
-  create_table "player_data", force: :cascade do |t|
+  create_table "info", force: :cascade do |t|
     t.string   "type"
     t.string   "image_url"
     t.string   "locations"
@@ -22,14 +22,7 @@ ActiveRecord::Schema.define(version: 20170108163037) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "quizzes", force: :cascade do |t|
-    t.integer  "correctAnswers"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.string   "title"
-  end
-
-  create_table "trivia_question", force: :cascade do |t|
+  create_table "questions", force: :cascade do |t|
     t.string   "type"
     t.string   "text"
     t.string   "possibilities"
@@ -38,6 +31,13 @@ ActiveRecord::Schema.define(version: 20170108163037) do
     t.integer  "quiz_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "quizzes", force: :cascade do |t|
+    t.integer  "correctAnswers"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "title"
   end
 
 end

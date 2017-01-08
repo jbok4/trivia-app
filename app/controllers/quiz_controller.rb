@@ -7,13 +7,13 @@ class QuizController < ApplicationController
   end
 
   def show
-    @trivia_questions = Trivia_question.where(quiz_id: @quiz.id).order("created_at DESC")
+    @questions = Question.where(quiz_id: @quiz.id).order("created_at DESC")
     render json: @quiz
   end
 
   def new
     @quiz = Quiz.build
-    @quiz.trivia_questions.build
+    @quiz.questions.build
   end
 
   def edit
@@ -48,6 +48,6 @@ class QuizController < ApplicationController
    end
 
     def quiz_params
-      params.require(:quiz).permit(:correctAnswers, trivia_questions_attributes: [:type, :text, :possibilities, :selected, :correct])
+      params.require(:quiz).permit(:correctAnswers, questions_attributes: [:type, :text, :possibilities, :selected, :correct])
     end
 end

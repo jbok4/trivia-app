@@ -1,2 +1,0 @@
-class PlayerDataController < ApplicationController
-end
