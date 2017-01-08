@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  text: MyString
+  possibilities: MyString
+  selected: false
+  correct: false
+
+two:
+  type: 
+  text: MyString
+  possibilities: MyString
+  selected: false
+  correct: false
